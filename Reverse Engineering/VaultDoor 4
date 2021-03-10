@@ -1,0 +1,26 @@
+myBytes = {
+            106 , 85  , 53  , 116 , 95  , 52  , 95  , 98  ,
+            0x55, 0x6e, 0x43, 0x68, 0x5f, 0x30, 0x66, 0x5f,
+            0142, 0131, 0164, 063 , 0163, 0137, 0143, 061 ,
+            '9' , '4' , 'f' , '7' , '4' , '5' , '8' , 'e' ,
+        };
+       
+I'll use python to solve this challenge 
+create a list 
+character before 9 are hex so convert them to int
+  finalBytes = [106 , 85  , 53  , 116 , 95  , 52  , 95  , 98  ,0x55, 0x6e, 0x43, 0x68, 0x5f, 0x30, 0x66, 0x5f,0142, 0131, 0164, 063 , 0163, 0137, 0143, 061 ,'9' , '4' , 'f' , '7' , '4' , '5' , '8' , 'e]
+  print(finalBytes)
+  [106, 85, 53, 116, 95, 52, 95, 98, 85, 110, 67, 104, 95, 48, 102, 95, 98, 89, 116, 51, 115, 95, 99, 49, '9', '4', 'f', '7', '4', '5', '8', 'e']
+  
+  
+final = [106, 85, 53, 116, 95, 52, 95, 98, 85, 110, 67, 104, 95, 48, 102, 95, 98, 89, 116, 51, 115, 95, 99, 49]
+>>> flag = ''
+>>> for i in range(len(final)):
+...     flag += str(unichr(final[i]))
+... 
+>>> print(flag)
+jU5t_4_bUnCh_0f_bYt3s_c1
+
+Adding the remaining strings to get our final flag:
+
+  picoCTF{jU5t_4_bUnCh_0f_bYt3s_c194f7458e}
